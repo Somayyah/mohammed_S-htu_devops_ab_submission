@@ -23,3 +23,6 @@ To access the website visit http://40.87.87.148:8080/___explore.
 ## Gridsome CI/CD - Automated Gridsome deployment with Docker and Git
 
 Manually deploying the website, tracking code changes and testing them is tiresome and leads to many conflicts and is the total opposite to what DevOps stands for. This can be avoided by automating the process using a container based approach.
+
+### Gridsome build with Docker
+ **Goal: ** Build an image named gridsome-docker that contains all the necessary dependancies to run our website.
