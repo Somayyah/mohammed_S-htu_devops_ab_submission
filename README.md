@@ -20,5 +20,4 @@ As per request of Kunsol group, this report describes the process and the finish
 
 To access the website visit http://40.87.87.148:8080/___explore.
 
-## Gridsome CI/CD
-
+## Gridsome CI/CD - Automated Gridsome deployment with Docker and Git
