@@ -19,3 +19,6 @@ As per request of Kunsol group, this report describes the process and the finish
 ![console](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsome)
 
 To access the website visit http://40.87.87.148:8080/___explore.
+
+## Gridsome CI/CD
+
