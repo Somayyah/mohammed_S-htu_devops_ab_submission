@@ -11,8 +11,7 @@ As per request of Kunsol group, this report describes the process and the finish
 4. Gridsome: A Vue.js framework.
 5. Nextcloud.
 6. statping:v0.90.36 docker image.
-7. Smartlook: website analytics.
-8. buttercup: Passwords management.
+7. buttercup: Passwords management.
 
 ## Gridsome Deployment Testing - Done
 
