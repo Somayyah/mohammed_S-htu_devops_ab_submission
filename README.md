@@ -33,17 +33,20 @@ Dockerfile is created :
 FROM node:14.2.0-alpine3.10
 
 RUN apk update && apk upgrade
-
 RUN apk add git yarn python
 RUN npm install --global chokidar
 RUN npm install sharp
 RUN npm install --global @gridsome/cli
 RUN git clone https://github.com/Somayyah/htu-devops-konsul-web.git
-RUN cd htu-devops-konsul-web/; npm rebuild; yarn
-
+RUN cd htu-devops-konsul-web/;
+RUN npm rebuild
+RUN yarn
 RUN gridsome develop
 ```
 To build the image use the command:
 ```
 docker build . -t gridsome-docker
 ```
+Docker image build --> Successfull.
+
+Website can be visited via: http://40.87.87.148:8080/___explore
