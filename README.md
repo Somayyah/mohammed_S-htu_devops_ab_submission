@@ -47,3 +47,6 @@ To build the image use the command:
 ```
 docker build . -t gridsome-docker
 ```
+Docker image build --> Successfull.
+
+Website can be visited via: http://40.87.87.148:8080/___explore
