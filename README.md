@@ -17,7 +17,7 @@ As per request of Kunsol group, this report describes the process and the finish
 
 ![console](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsome)
 
-To access the website visit http://40.87.87.148:8080/___explore.
+To access the website visit http://40.87.87.148:8080/
 
 ## Gridsome CI/CD - Automated Gridsome deployment with Docker and Git
 
@@ -48,4 +48,4 @@ docker build . -t gridsome-docker
 ```
 Docker image build --> Successfull.
 
-Website can be visited via: http://40.87.87.148:8080/___explore
+Website can be visited via: http://40.87.87.148:8080/
