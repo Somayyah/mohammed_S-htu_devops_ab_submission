@@ -38,7 +38,7 @@ ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 USER node
 RUN npm i --global gridsome
 
-COPY --chown=node:node ./ /home/node/build/
+COPY --chown=node:node htu-devops-konsul-web/ /home/node/build/
 WORKDIR /home/node/build
 USER node
 RUN npm cache clean --force
