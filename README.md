@@ -83,4 +83,6 @@ Image building can be automated after connecting dockerhub image repo to the app
 
 ![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/autobuilds.png)
 
+## Continuous deployment using Rancher
+Using Rancher:stable image, we can automate our deployment process.
 
