@@ -80,6 +80,6 @@ If deployed correctly, our website can be visited via: http://40.87.87.148:8080/
 
 ## DockerHub - GitHub Automated builds (CI)
 Image building can be automated after connecting dockerhub image repo to the appropriate github repo. Build instances can be viewed and monitord in the timeline section.
-![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/Screenshot from 2020-05-14 22-49-37.png)
+![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/autobuilds.png)
 
 
