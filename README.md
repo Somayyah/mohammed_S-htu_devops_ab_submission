@@ -77,3 +77,7 @@ To install ```serve``` type the following command:
 sudo snap serve
 ````
 If deployed correctly, our website can be visited via: http://40.87.87.148:8080/
+
+## DockerHub - GitHub Automated builds (CI)
+Image building can be automated after connecting dockerhub image repo to the appropriate github repo. Build instances can be viewed and monitord in the timeline section.
+
