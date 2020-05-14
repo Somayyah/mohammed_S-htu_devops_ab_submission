@@ -74,7 +74,7 @@ serve -d dist/
 ```
 To install ```serve``` type the following command:
 ```
-sudo snap serve
+sudo snap install serve
 ````
 If deployed correctly, our website can be visited via: http://40.87.87.148:8080/
 
