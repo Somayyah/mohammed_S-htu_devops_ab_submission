@@ -8,6 +8,7 @@ USER node
 RUN npm i --global gridsome
 
 COPY --chown=node:node htu-devops-konsul-web/ /home/node/build/
+RUN echo && ls && echo
 WORKDIR /home/node/build
 USER node
 RUN npm cache clean --force
