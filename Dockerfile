@@ -1,6 +1,6 @@
 FROM node:14.2.0-alpine3.10 AS builder
 
-RUN apk update && apk upgrade
+#RUN apk update && apk upgrade
 RUN apk --no-cache add git g++ gcc libgcc libstdc++ linux-headers make python
 
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
