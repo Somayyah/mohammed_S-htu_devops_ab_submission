@@ -72,7 +72,7 @@ To install ```serve``` type the following command:
 ```
 sudo snap install serve
 ````
-If deployed correctly, our website can be visited via: http://localhost:8080/
+If deployed correctly, our website can be visited via: http://VM-IP:8080/
 
 ## DockerHub - GitHub Automated builds (CI)
 Image building can be automated after connecting dockerhub image repo to the appropriate github repo. Build instances can be viewed and monitord in the timeline section.
@@ -106,3 +106,5 @@ After creating the cluster, we can view it in the global view. It needs some tim
 
 ### Rancher workload configuration.
 After experimenting with our website docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on rancher to make it accessable.
+__Step 1:__ From our cluster go to default
+![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/def.png)
