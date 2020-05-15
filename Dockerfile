@@ -1,11 +1,12 @@
 FROM node:14.2.0-alpine3.10 AS builder
 
 #RUN apk update && apk upgrade
-RUN apk --no-cache add git g++ gcc libgcc libstdc++ linux-headers make python
+RUN apk --no-cache add git g++ gcc libgcc libstdc++ linux-headers make python yarn
 
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 USER node
 RUN npm i --global gridsome
+RUN yarn global add serve
 
 COPY --chown=node:node htu-devops-konsul-web/ /home/node/build/
 RUN echo && ls /home/node/build/ && echo
