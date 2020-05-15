@@ -83,6 +83,16 @@ Image building can be automated after connecting dockerhub image repo to the app
 
 ![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/autobuilds.png)
 
+Docker hub repository is connected with github, automatic build is configures on both the master and development branch.
+Repo on docker hub: https://hub.docker.com/r/somayyah/konsul.
+
 ## Continuous deployment using Rancher
-Using Rancher:stable image, we can automate our deployment process.
+Using Rancher, we can automate our containers deployment process. Setting rancher is as simple as running any ther generic container. Using **rancher:stable** docker image we can deploy rancher with the following command:
+
+```
+docker run -d --restart=unless-stopped \
+  -p 80:80 -p 443:443 \
+  rancher/rancher:latest
+```
+Rancher uses the ports 80 and 443, make sure they can be accessable. To access the rancher CPanel, go to https://vm-ip
 
