@@ -99,3 +99,4 @@ __Step 1:__ From rancher's main page click on ```add cluster``` button
 __Step 2:__ We are going to deploy using Azure AKS so we will select it.
 __Step 3:__ Fill the relevent data like the name and ID's.
 After creating the cluster, we can view it in the global view.
+![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/global.png)
