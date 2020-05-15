@@ -6,7 +6,7 @@ RUN apk --no-cache add git g++ gcc libgcc libstdc++ linux-headers make python ya
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 USER node
 RUN npm i --global gridsome
-RUN yarn global add serve
+RUN npm i --global serve
 
 COPY --chown=node:node htu-devops-konsul-web/ /home/node/build/
 RUN echo && ls /home/node/build/ && echo
