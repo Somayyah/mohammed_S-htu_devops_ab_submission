@@ -13,7 +13,7 @@ As per request of Kunsol group, this report describes the process and the finish
 6. statping:v0.90.36 docker image.
 7. buttercup: Passwords management.
 
-## Gridsome Deployment Testing - Done
+## Gridsome local Deployment Testing
 
 ![console](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsome)
 
@@ -83,7 +83,10 @@ Docker hub repository is connected with github, automatic build is configures on
 Repo on docker hub: https://hub.docker.com/r/somayyah/konsul.
 
 ## Continuous deployment using Rancher
-Using Rancher, we can automate our containers deployment process. Setting rancher is as simple as running any ther generic container. Using **rancher:stable** docker image we can deploy rancher with the following command:
+Using Rancher, we can automate our containers deployment process. Setting rancher is as simple as running any ther generic container.
+
+### Setting up Rancher
+Using **rancher:stable** docker image we can deploy rancher with the following command:
 
 ```
 docker run -d --restart=unless-stopped \
@@ -98,5 +101,8 @@ __Step 1:__ From rancher's main page click on ```add cluster``` button
 ![add cluster](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/cluster.png)
 __Step 2:__ We are going to deploy using Azure AKS so we will select it.
 __Step 3:__ Fill the relevent data like the name and ID's.
-After creating the cluster, we can view it in the global view.
+After creating the cluster, we can view it in the global view. It needs some time to become active.
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/global.png)
+
+### Rancher workload configuration.
+After experimenting with our website docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on rancher to make it accessable.
