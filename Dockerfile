@@ -1,7 +1,7 @@
 FROM node:14.2.0-alpine3.10
 
 #RUN apk update && apk upgrade
-RUN apk --no-cache add git g++ gcc libgcc libstdc++ linux-headers make python yarn
+RUN apk --no-cache add git g++ gcc libgcc libstdc++ linux-headers make python util-linux
 
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 USER node
