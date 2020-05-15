@@ -14,5 +14,5 @@ WORKDIR /home/node/build
 USER node
 RUN npm cache clean --force
 RUN npm clean-install
-
+EXPOSE 8080/tcp
 CMD ~/.npm-global/bin/gridsome build && ~/.npm-global/bin/serve -d /home/node/build/dist/
