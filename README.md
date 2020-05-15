@@ -121,3 +121,12 @@ __Step 4:__ Click on add port and set the feilds as the following:<br>
 __Step 5:__ Click save and wait for the changes to be applied. To view our deployed site, click on ```80/tcp``` located under the workload name.<br>
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)<br>
 Our website is now deployed and can be accecced via: https://20.185.39.108/<br>
+
+### Grafana and Prometheus monitoring: <br>
+
+To monitor our Kubernetes cluster we can configure Rancher to deploy Prometheus, by following the steps from the official documentation:<br>
+
+> 1. From the **Global** view, navigate to the cluster that you want to configure cluster monitoring.<br>
+> 2. Select **Tools** > **Monitoring** in the navigation bar.<br>
+> 3. Select **Enable** to show the Prometheus configuration options. Review the resource consumption recommendations to ensure you have enough resources for Prometheus and on your worker nodes to enable monitoring. Enter in your desired configuration options.<br>
+> 4. Click **Save**.<br>
