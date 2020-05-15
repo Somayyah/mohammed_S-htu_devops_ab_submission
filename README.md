@@ -120,7 +120,7 @@ __Step 4:__ Click on add port and set the feilds as the following:<br>
 * On listening port : 80<br>
 __Step 5:__ Click save and wait for the changes to be applied. To view our deployed site, click on ```80/tcp``` located under the workload name.<br>
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)<br>
-Our website is now deployed and can be accecced via: https://20.185.39.108/<br>
+Our website is now deployed and can be accecced via: http://20.185.39.108/<br>
 
 ### Grafana and Prometheus monitoring: <br>
 
