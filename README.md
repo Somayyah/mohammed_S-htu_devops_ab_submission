@@ -92,4 +92,7 @@ docker run -d --restart=unless-stopped \
 ```
 Rancher uses the ports 80 and 443, make sure they can be accessable. To access the rancher CPanel, go to ```https://vm-ip```.
 After setting the admin password, clusters configuration can be initiated.
+To build a new cluster:
 
+__Step 1:__ From rancher's main page click on ```add cluster``` button
+![add cluster](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/cluster.png)
