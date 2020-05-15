@@ -9,10 +9,12 @@ RUN npm i --global gridsome
 RUN npm i --global serve
 
 COPY --chown=node:node htu-devops-konsul-web/ /home/node/build/
+COPY execute.sh /home/node/build/execute.sh
 RUN echo && ls /home/node/build/ && echo
 WORKDIR /home/node/build
 USER node
 RUN npm cache clean --force
 RUN npm clean-install
 EXPOSE 8080/tcp
-CMD ~/.npm-global/bin/gridsome build && ~/.npm-global/bin/serve -d /home/node/build/dist/
+#CMD ~/.npm-global/bin/gridsome build && ~/.npm-global/bin/serve -d /home/node/build/dist/
+CMD ./execute.sh
