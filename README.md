@@ -17,7 +17,7 @@ As per request of Kunsol group, this report describes the process and the finish
 
 ![console](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsome)
 
-To access the website visit http://40.87.87.148:8080/
+To access the website visit http://localhost:8080/
 
 ## Gridsome CI/CD - Automated Gridsome deployment with Docker and Git
 
@@ -72,7 +72,7 @@ To install ```serve``` type the following command:
 ```
 sudo snap install serve
 ````
-If deployed correctly, our website can be visited via: http://40.87.87.148:8080/
+If deployed correctly, our website can be visited via: http://localhost:8080/
 
 ## DockerHub - GitHub Automated builds (CI)
 Image building can be automated after connecting dockerhub image repo to the appropriate github repo. Build instances can be viewed and monitord in the timeline section.
@@ -96,3 +96,6 @@ To build a new cluster:
 
 __Step 1:__ From rancher's main page click on ```add cluster``` button
 ![add cluster](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/cluster.png)
+__Step 2:__ We are going to deploy using Azure AKS so we will select it.
+__Step 3:__ Fill the relevent data like the name and ID's.
+After creating the cluster, we can view it in the global view.
