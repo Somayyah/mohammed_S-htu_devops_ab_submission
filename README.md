@@ -111,3 +111,9 @@ __Step 1:__ From our cluster go to default.
 __Step 2:__ On the right side of the screen select ```Deploy```.
 __Step 3:__ Set the name to what you like and the docker image, in our case we will use ```somayyah/konsul```.
 __Step 4:__ Click on add port and set the feilds as the following:
+* Port Name	: any name.
+* Publish the container port : 5000
+* Protocol	: TCP
+* As a	: Layer-4 load balancer
+* On listening port : 80
+__Step 5:__ Click save and wait for the changes to be applied.
