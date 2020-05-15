@@ -106,18 +106,18 @@ After creating the cluster, we can view it in the global view. It needs some tim
 
 ### Rancher workload configuration.
 
-After experimenting with our website docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on rancher to make it accessable.
+After experimenting with our website docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on rancher to make it accessable.<br>
 
-__Step 1:__ From our cluster go to default.
-![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/def.png)
-__Step 2:__ On the right side of the screen select ```Deploy```.
-__Step 3:__ Set the name to what you like and the docker image, in our case we will use ```somayyah/konsul```.
-__Step 4:__ Click on add port and set the feilds as the following:
-* Port Name	: any name.
-* Publish the container port : 5000
-* Protocol	: TCP
-* As a	: Layer-4 load balancer
-* On listening port : 80
-__Step 5:__ Click save and wait for the changes to be applied. To view our deployed site, click on ```80/tcp``` located under the workload name
-![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)
-Our website is now deployed and can be accecced via: https://20.185.39.108/
+__Step 1:__ From our cluster go to default.<br>
+![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/def.png)<br>
+__Step 2:__ On the right side of the screen select ```Deploy```.<br>
+__Step 3:__ Set the name to what you like and the docker image, in our case we will use ```somayyah/konsul```.<br>
+__Step 4:__ Click on add port and set the feilds as the following:<br>
+* Port Name	: any name.<br>
+* Publish the container port : 5000<br>
+* Protocol	: TCP<br>
+* As a	: Layer-4 load balancer<br>
+* On listening port : 80<br>
+__Step 5:__ Click save and wait for the changes to be applied. To view our deployed site, click on ```80/tcp``` located under the workload name.<br>
+![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)<br>
+Our website is now deployed and can be accecced via: https://20.185.39.108/<br>
