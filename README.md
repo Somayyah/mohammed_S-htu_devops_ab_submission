@@ -133,3 +133,4 @@ To monitor our Kubernetes cluster we can configure Rancher to deploy Prometheus,
 > 2. Select **Tools** > **Monitoring** in the navigation bar.<br>
 > 3. Select **Enable** to show the Prometheus configuration options. Review the resource consumption recommendations to ensure you have enough resources for Prometheus and on your worker nodes to enable monitoring. Enter in your desired configuration options.<br>
 > 4. Click **Save**.<br>
+To access the grafana dashboard can be done from global view -> cluster dashbourd -> click on grafana icon.<br>
