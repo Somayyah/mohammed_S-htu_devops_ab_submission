@@ -14,4 +14,4 @@ USER node
 RUN npm cache clean --force
 RUN npm clean-install
 
-CMD ~/.npm-global/bin/gridsome build && serve -d /home/node/build/dist/
+CMD ~/.npm-global/bin/gridsome build && serve -d dist/
