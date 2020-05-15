@@ -1,4 +1,4 @@
-FROM node:14.2.0-alpine3.10 AS builder
+FROM node:14.2.0-alpine3.10
 
 #RUN apk update && apk upgrade
 RUN apk --no-cache add git g++ gcc libgcc libstdc++ linux-headers make python yarn
