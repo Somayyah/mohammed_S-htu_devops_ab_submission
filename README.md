@@ -124,6 +124,9 @@ Our website is now deployed and can be accecced via: https://20.185.39.108/<br>
 
 ### Grafana and Prometheus monitoring: <br>
 
+__PREREQUISITE:__<br>
+* Make sure that you are allowing traffic on port 9796 for each of your nodes because Prometheus will scrape metrics from here.<br>
+
 To monitor our Kubernetes cluster we can configure Rancher to deploy Prometheus, by following the steps from the official documentation:<br>
 
 > 1. From the **Global** view, navigate to the cluster that you want to configure cluster monitoring.<br>
