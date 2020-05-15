@@ -94,5 +94,6 @@ docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
   rancher/rancher:latest
 ```
-Rancher uses the ports 80 and 443, make sure they can be accessable. To access the rancher CPanel, go to https://vm-ip
+Rancher uses the ports 80 and 443, make sure they can be accessable. To access the rancher CPanel, go to ```https://vm-ip```.
+After setting the admin password, clusters configuration can be initiated.
 
