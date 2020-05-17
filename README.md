@@ -136,5 +136,5 @@ To monitor our Kubernetes cluster we can configure Rancher to deploy Prometheus,
 To access the Grafana dashboard can be done from global view -> cluster dashbourd -> click on Grafana icon.<br>
 ![dashboard](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/dashboard.png)<br>
 
-## Nextcloud Setup and Deployment:<br>
-
+## Nextcloud - PostgreSQL Setup and Deployment:<br>
+setting up Nextcloud in congugation with PostgreSQL database is a rather simple task. 
