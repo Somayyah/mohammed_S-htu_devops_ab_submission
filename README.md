@@ -137,4 +137,13 @@ To access the Grafana dashboard can be done from global view -> cluster dashbour
 ![dashboard](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/dashboard.png)<br>
 
 ## Nextcloud - PostgreSQL Setup and Deployment:<br>
-setting up Nextcloud in congugation with PostgreSQL database is a rather simple task. 
+Deploying Nextcloud in congugation with PostgreSQL database is a rather simple task, to successfuly perform the setup I followed these steps:
+__Step 1:__ On our cluster, we create a workload with these parameters:
+* Name: nextcloud-website
+* Docker Image: nextcloud
+* Port Mapping: 
+> * Port Name	: any name.<br>
+> * Publish the container port : 80<br>
+> * Protocol	: TCP<br>
+> * As a	: Layer-4 load balancer<br>
+> * On listening port : 80<br>
