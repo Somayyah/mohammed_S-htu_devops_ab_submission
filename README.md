@@ -104,7 +104,7 @@ __Step 3:__ Fill the relevent data like the name and ID's.
 After creating the cluster, we can view it in the global view. It needs some time to become active.
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/global.png)
 
-### Rancher Workload Configuration.
+### Rancher Workload Configuration
 
 After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on Rancher to make it accessable.<br>
 
@@ -122,7 +122,7 @@ __Step 5:__ Click save and wait for the changes to be applied. To view our deplo
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)<br>
 Our website is now deployed and can be accecced via: http://20.185.39.108/<br>
 
-### Grafana and Prometheus Monitoring: <br>
+### Grafana and Prometheus Monitoring <br>
 
 __PREREQUISITE:__<br>
 * Make sure that you are allowing traffic on port 9796 for each of your nodes because Prometheus will scrape metrics from here.<br>
@@ -136,7 +136,7 @@ To monitor our Kubernetes cluster we can configure Rancher to deploy Prometheus,
 To access the Grafana dashboard can be done from global view -> cluster dashbourd -> click on Grafana icon.<br>
 ![dashboard](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/dashboard.png)<br>
 
-## Nextcloud - PostgreSQL Setup and Deployment:<br>
+## Nextcloud - PostgreSQL Setup and Deployment<br>
 Deploying Nextcloud in congugation with PostgreSQL database is a rather simple task, to successfuly perform the setup I followed these steps:
 __Step 1:__ On our cluster, we create the nextcloud workload with these parameters:
 * Name: nextcloud-website
@@ -180,3 +180,7 @@ __Step 3:__ After the deployment finishes, we setup the admin account as follows
 After accessing the admin portal, you can add users, groups and try all of the other available services.
 
 Admin account setup, done.
+
+# Statping Setup
+
+Here.
