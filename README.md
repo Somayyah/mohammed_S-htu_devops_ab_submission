@@ -147,3 +147,11 @@ __Step 1:__ On our cluster, we create a workload with these parameters:
 > * Protocol	: TCP<br>
 > * As a	: Layer-4 load balancer<br>
 > * On listening port : 80<br>
+* Environment variables:
+> * POSTGRES_DB=postgressdb
+> * POSTGRES_USER=user-name
+> * POSTGRES_PASSWORD=db-password
+> * POSTGRES_HOST=postgressdb
+> * NEXTCLOUD_ADMIN_USER=admin
+> * NEXTCLOUD_ADMIN_PASSWORD=admin-pass
+> * NEXTCLOUD_DATA_DIR=/var/www/html/data
