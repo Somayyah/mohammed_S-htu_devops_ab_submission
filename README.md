@@ -155,3 +155,10 @@ __Step 1:__ On our cluster, we create a workload with these parameters:
 > * NEXTCLOUD_ADMIN_USER=admin
 > * NEXTCLOUD_ADMIN_PASSWORD=admin-pass
 > * NEXTCLOUD_DATA_DIR=/var/www/html/data
+* Volumes:
+> * Volume Name: nextcloud
+> * Path on the Node: /nextcloud
+> * The Path on the Node must be: a directory or create
+> * Mount Point: /var/www/html
+
+Netxcloud setup ==> Done.
