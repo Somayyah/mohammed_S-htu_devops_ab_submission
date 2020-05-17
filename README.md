@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As per request of Kunsol group, this report describes the process and the finished tasks for the konsul website. A comprehensive list of all the tools ranging from collaboration platform and monitoring tools, to orchestration and containerisation tools is provided. The following procedure section explains the the reasoning and thought process behind  the many design choices that were made and it is also displays the configurations and the diagrams sections.
+As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools, to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind  the many design choices that were made. Additionally, it is also displays the configurations and the diagram section.
 
 ## Tools and services used:
 1. Rancher:stable container.
@@ -24,7 +24,7 @@ To access the website visit http://localhost:8080/
 Manually setting the infartructure, deploying the website, tracking code changes and testing them is tiresome and leads to many conflicts and is the total opposite to what DevOps stands for. This can be avoided by automating the process using a container based approach. With containarization, we can setup our infrastructure as many times as we want in a negligeble time, while ensuring the same result everytime.
 
 ### Gridsome build with Docker
- __Goal:__ Build an image named gridsome-docker that contains all the necessary dependancies to run our website. 
+ __Goal:__ To build an image named gridsome-docker that contains all the necessary dependancies to run our website. 
 
 #### Image Dockerfile 
 
@@ -74,30 +74,30 @@ sudo snap install serve
 ````
 If deployed correctly, our website can be visited via: http://VM-IP:8080/
 
-## DockerHub - GitHub Automated builds (CI)
+## DockerHub - GitHub Automated Builds (CI)
 Image building can be automated after connecting dockerhub image repo to the appropriate github repo. Build instances can be viewed and monitord in the timeline section.
 
 ![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/autobuilds.png)
 
-Docker hub repository is connected with github, automatic build is configures on both the master and development branch.
+THe DockerHub repository is connected with GitHub, automatic build is configures on both the master and development branch.
 Repo on docker hub: https://hub.docker.com/r/somayyah/konsul.
 
 ## Continuous deployment using Rancher
-Using Rancher, we can automate our containers deployment process. Setting rancher is as simple as running any ther generic container.
+Using Rancher, we can automate the deployment process for our containers. Setting Rancher is as simple as running any other generic container.
 
 ### Setting up Rancher
-Using **rancher:stable** docker image we can deploy rancher with the following command:
+Using **rancher:stable** docker image we can deploy Rancher with the following command:
 
 ```
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
   rancher/rancher:latest
 ```
-Rancher uses the ports 80 and 443, make sure they can be accessable. To access the rancher CPanel, go to ```https://vm-ip```.
+Rancher uses the ports 80 and 443, make sure they can be accessable. To access the Rancher CPanel, go to ```https://vm-ip```.
 After setting the admin password, clusters configuration can be initiated.
 To build a new cluster:
 
-__Step 1:__ From rancher's main page click on ```add cluster``` button
+__Step 1:__ From Rancher's main page click on ```add cluster``` button
 ![add cluster](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/cluster.png)
 __Step 2:__ We are going to deploy using Azure AKS so we will select it.
 __Step 3:__ Fill the relevent data like the name and ID's.
@@ -106,7 +106,7 @@ After creating the cluster, we can view it in the global view. It needs some tim
 
 ### Rancher workload configuration.
 
-After experimenting with our website docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on rancher to make it accessable.<br>
+After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on rancher to make it accessable.<br>
 
 __Step 1:__ From our cluster go to default.<br>
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/def.png)<br>
