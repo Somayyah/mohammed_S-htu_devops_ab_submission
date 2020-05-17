@@ -161,7 +161,7 @@ __Step 1:__ On our cluster, we create the nextcloud workload with these paramete
 > * The Path on the Node must be: a directory or create
 > * Mount Point: /var/www/html
 
-Netxcloud setup, Done.
+Netxcloud setup, done.
 __Step 2:__ On our cluster, we create the database workload with these parameters:
 * Name: postgressdb
 * Docker Image: postgres
@@ -170,9 +170,13 @@ __Step 2:__ On our cluster, we create the database workload with these parameter
 > * POSTGRES_USER=user-name
 > * POSTGRES_PASSWORD=db-password
 
-database setup, Done.
+database setup, done.
 
 __Step 3:__ After the deployment finishes, we setup the admin account as follows:
 1. Go to the new Nextcloud IP, in our case it's: http://52.170.38.5/
 2. When prompted to create an admin account, enter the admin username and password that we previously defined in the nextcloud workload.
 3. Wait untill the setup finishes.
+
+After accessing the admin portal, you can add users, groups and try all of the other available services.
+
+Admin account setup, done.
