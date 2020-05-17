@@ -138,7 +138,7 @@ To access the Grafana dashboard can be done from global view -> cluster dashbour
 
 ## Nextcloud - PostgreSQL Setup and Deployment:<br>
 Deploying Nextcloud in congugation with PostgreSQL database is a rather simple task, to successfuly perform the setup I followed these steps:
-__Step 1:__ On our cluster, we create a workload with these parameters:
+__Step 1:__ On our cluster, we create the nextcloud workload with these parameters:
 * Name: nextcloud-website
 * Docker Image: nextcloud
 * Port Mapping: 
@@ -161,4 +161,18 @@ __Step 1:__ On our cluster, we create a workload with these parameters:
 > * The Path on the Node must be: a directory or create
 > * Mount Point: /var/www/html
 
-Netxcloud setup ==> Done.
+Netxcloud setup, Done.
+__Step 2:__ On our cluster, we create the database workload with these parameters:
+* Name: postgressdb
+* Docker Image: postgres
+* Environment variables:
+> * POSTGRES_DB=postgressdb
+> * POSTGRES_USER=user-name
+> * POSTGRES_PASSWORD=db-password
+
+database setup, Done.
+
+__Step 3:__ After the deployment finishes, we setup the admin account as follows:
+1. Go to the new Nextcloud IP, in our case it's: http://52.170.38.5/
+2. When prompted to create an admin account, enter the admin username and password that we previously defined in the nextcloud workload.
+3. Wait untill the setup finishes.
