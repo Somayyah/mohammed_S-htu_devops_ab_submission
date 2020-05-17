@@ -1,29 +1,29 @@
-# Container based website deployment - kunsol group
+# Container Based Website Deployment - Kunsol Group
 
 ## Introduction
 
 As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools, to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind  the many design choices that were made. Additionally, it is also displays the configurations and the diagram section.
 
-## Tools and services used:
+## Tools and Services Used
 1. Rancher:stable container.
 2. Azure pipelines.
 3. Git / github.
 4. Gridsome: A Vue.js framework.
 5. Nextcloud.
-6. statping:v0.90.36 docker image.
-7. buttercup: Passwords management.
+6. statping:v0.90.36 Docker image.
+7. Buttercup: Passwords management.
 
-## Gridsome local Deployment Testing
+## Gridsome Local Deployment Testing
 
 ![console](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsome)
 
 To access the website visit http://localhost:8080/
 
-## Gridsome CI/CD - Automated Gridsome deployment with Docker and Git
+## Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git
 
-Manually setting the infartructure, deploying the website, tracking code changes and testing them is tiresome and leads to many conflicts and is the total opposite to what DevOps stands for. This can be avoided by automating the process using a container based approach. With containarization, we can setup our infrastructure as many times as we want in a negligeble time, while ensuring the same result everytime.
+Manually setting the infartructure, deploying the website, tracking code changes and testing them is tiresome and leads to many conflicts, the total opposite to what DevOps stands for. This can be avoided by automating the process using a container based approach. With containarization, we can setup our infrastructure as many times as we want in a negligeble time, while ensuring the same result everytime.
 
-### Gridsome build with Docker
+### Gridsome Build with Docker
  __Goal:__ To build an image named gridsome-docker that contains all the necessary dependancies to run our website. 
 
 #### Image Dockerfile 
@@ -75,18 +75,18 @@ sudo snap install serve
 If deployed correctly, our website can be visited via: http://VM-IP:8080/
 
 ## DockerHub - GitHub Automated Builds (CI)
-Image building can be automated after connecting dockerhub image repo to the appropriate github repo. Build instances can be viewed and monitord in the timeline section.
+Image building can be automated after connecting DockerHub image repository to the appropriate github repository. Build instances can be viewed and monitord in the timeline section.
 
 ![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/autobuilds.png)
 
 THe DockerHub repository is connected with GitHub, automatic build is configures on both the master and development branch.
 Repo on docker hub: https://hub.docker.com/r/somayyah/konsul.
 
-## Continuous deployment using Rancher
+## Continuous Deployment Using Rancher
 Using Rancher, we can automate the deployment process for our containers. Setting Rancher is as simple as running any other generic container.
 
-### Setting up Rancher
-Using **rancher:stable** docker image we can deploy Rancher with the following command:
+### Setting Up Rancher
+Using **rancher:stable** Docker image we can deploy Rancher with the following command:
 
 ```
 docker run -d --restart=unless-stopped \
@@ -104,14 +104,14 @@ __Step 3:__ Fill the relevent data like the name and ID's.
 After creating the cluster, we can view it in the global view. It needs some time to become active.
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/global.png)
 
-### Rancher workload configuration.
+### Rancher Workload Configuration.
 
-After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on rancher to make it accessable.<br>
+After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on Rancher to make it accessable.<br>
 
 __Step 1:__ From our cluster go to default.<br>
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/def.png)<br>
 __Step 2:__ On the right side of the screen select ```Deploy```.<br>
-__Step 3:__ Set the name to what you like and the docker image, in our case we will use ```somayyah/konsul```.<br>
+__Step 3:__ Set the name to what you like and the Docker image, in our case we will use ```somayyah/konsul```.<br>
 __Step 4:__ Click on add port and set the feilds as the following:<br>
 * Port Name	: any name.<br>
 * Publish the container port : 5000<br>
@@ -122,7 +122,7 @@ __Step 5:__ Click save and wait for the changes to be applied. To view our deplo
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)<br>
 Our website is now deployed and can be accecced via: http://20.185.39.108/<br>
 
-### Grafana and Prometheus monitoring: <br>
+### Grafana and Prometheus Monitoring: <br>
 
 __PREREQUISITE:__<br>
 * Make sure that you are allowing traffic on port 9796 for each of your nodes because Prometheus will scrape metrics from here.<br>
@@ -133,7 +133,7 @@ To monitor our Kubernetes cluster we can configure Rancher to deploy Prometheus,
 > 2. Select **Tools** > **Monitoring** in the navigation bar.<br>
 > 3. Select **Enable** to show the Prometheus configuration options. Review the resource consumption recommendations to ensure you have enough resources for Prometheus and on your worker nodes to enable monitoring. Enter in your desired configuration options.<br>
 > 4. Click **Save**.<br>
-To access the grafana dashboard can be done from global view -> cluster dashbourd -> click on grafana icon.<br>
+To access the Grafana dashboard can be done from global view -> cluster dashbourd -> click on Grafana icon.<br>
 ![dashboard](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/dashboard.png)<br>
 
 ## Nextcloud Setup and Deployment:<br>
