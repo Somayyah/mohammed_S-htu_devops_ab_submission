@@ -42,15 +42,12 @@ ________________________________________________________________
 ## Tasks
 
 ### Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git
-
+Manually setting the infartructure, deploying the website, tracking code changes and testing them is tiresome and leads to many conflicts, the total opposite to what DevOps stands for. This can be avoided by automating the process using a container based approach. With containarization, we can setup our infrastructure as many times as we want in a negligeble time, while ensuring the same result everytime.
 #### Gridsome Local Deployment - Test
 <a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/gridsome.png" align="left" height="300"></a>
-  </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
 To access the website visit http://localhost:8080/
 ________________________________________________________________
-
-Manually setting the infartructure, deploying the website, tracking code changes and testing them is tiresome and leads to many conflicts, the total opposite to what DevOps stands for. This can be avoided by automating the process using a container based approach. With containarization, we can setup our infrastructure as many times as we want in a negligeble time, while ensuring the same result everytime.
-
 #### Gridsome Build with Docker
  __Goal:__ To build an image named gridsome-docker that contains all the necessary dependancies to run our website. 
 
