@@ -246,7 +246,7 @@ Fill the following parameters:
 * Verify SSL: Greyed out.
 Then click on ```create service```. We should see our new services in the service tab, sometimes a refresh is necessary.
 To monitor the Kunsol and Nextcloud websites I created the following services:
-<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/ourservices.png" align="left" height="400"></a>
-<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/webs.png" align="left" height="400"></a>
+<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/ourservices.png" align="left" height="300"></a>
+<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/webs.png" align="left" height="300"></a><br>
 ## Conclusion
 Following a DevOps architecture approach instead of the waterfall approach can be of great help by reducing maintenance and deployment time in exchange for higher productivity and quality. By applying my skills and knowledge to follow this approach, I was able to implement all the required tasks, replicating the results can easily be done without hassle or conflicts.
