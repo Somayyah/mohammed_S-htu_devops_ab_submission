@@ -187,3 +187,26 @@ __username:__ Linux and DevOps
 __password:__ Linux and DevOps
 
 # Statping Setup
+Statping provides a status page to monitor websites and applications. It automatically fetchs the application's data render it. It can be paired with MySQL, Postgres, or SQLite on multiple operating systems. Setting up Statping is easy, here is how to do it:
+
+__Step 1:__ On rancher, create a new workload with the following parameters:
+
+* Name: m-statping
+* Docker Image: statping/statping:v0.90.36
+* Port Mapping: 
+> * Port Name	: any name.<br>
+> * Publish the container port : 8080<br>
+> * Protocol	: TCP<br>
+> * As a	: Layer-4 load balancer<br>
+> * On listening port : 80<br>
+* Environment variables:
+> * DB_CONN=sqlite
+> * ADMIN_USER=admin
+> * ADMIN_PASSWORD=admin-pass
+> * DESCRIPTION=any descreption
+> * NAME=Dashboard-name
+* Volumes:
+> * Volume Name: statping
+> * Path on the Node: /mydir/my-statping
+> * The Path on the Node must be: a directory or create
+> * Mount Point: /app
