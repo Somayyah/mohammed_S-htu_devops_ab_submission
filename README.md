@@ -7,7 +7,8 @@
   </div>
  
 <a href="url"><img src="https://i0.wp.com/www.hashtagarabi.com/wp-content/uploads/2017/10/20604537_1878331972486933_594423176737691610_n.png?fit=610%2C380&ssl=1" align="left" height="140"></a>
-<p align="center"> <strong>Kunsol Group <br> Website Deployment</strong></p><br><br><br>
+<h1 style="text-align:center">Kunsol Group <br> Website Deployment</h1>
+<p align="center" style="font-size:100px"> <strong></strong></p><br><br><br>
 
 ____________________________________________________________________________________________________________________________
 ## Introduction
