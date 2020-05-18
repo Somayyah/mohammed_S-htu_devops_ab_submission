@@ -2,7 +2,7 @@
   <div class="column">
   </div>
   <div class="column">
-    <a href="url"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" align="right" height="175"></a>
+    <a href="url"><img src="https://d3pmluylahx1gi.cloudfront.net/wp-content/uploads/2019/08/04212458/Nub8-What-is-Devops.png" align="right" height="175"></a>
   </div>
  
 <a href="url"><img src="https://i0.wp.com/www.hashtagarabi.com/wp-content/uploads/2017/10/20604537_1878331972486933_594423176737691610_n.png?fit=610%2C380&ssl=1" align="vertical-align:middle" height="175"></a>
@@ -13,12 +13,12 @@ ________________________________________________________________________________
 ## Introduction
 
 As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools, to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind  the many design choices that were made. Additionally, it is also displays the configurations and the diagram section.
-
 ________________________________________________________________
+
 ## Tools and Services Used
-1. Rancher:stable container.
+1. Rancher:stable container - Orchestration.
 2. Azure pipelines.
-3. Git / github.
+3. Git / github - Code versioning and 
 4. Gridsome: A Vue.js framework.
 5. Nextcloud.
 6. statping:v0.90.36 Docker image.
