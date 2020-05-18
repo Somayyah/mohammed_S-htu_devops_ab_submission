@@ -146,11 +146,11 @@ __Step 1:__ From our cluster go to default.
 <a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/def.png" align="left" height="300"></a>
 __Step 2:__ On the right side of the screen select ```Deploy```.<br>
 __Step 3:__ Set the name to what you like and the Docker image, in our case we will use ```somayyah/konsul```.<br>
-__Step 4:__ Click on add port and set the feilds as the following:<br>
-* Port Name    : any name.<br>
+<br><br><br><br>__Step 4:__ Click on add port and set the feilds as the following:<br>
+* Port Name: any name.<br>
 * Publish the container port : 5000<br>
-* Protocol    : TCP<br>
-* As a    : Layer-4 load balancer<br>
+* Protocol: TCP<br>
+* As a: Layer-4 load balancer<br>
 * On listening port : 80<br>
 __Step 5:__ Click save and wait for the changes to be applied. To view our deployed site, click on ```80/tcp``` located under the workload name.<br>
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)<br>
