@@ -25,6 +25,10 @@
       - [Grafana and Prometheus Monitoring <br>](#grafana-and-prometheus-monitoring--br-)
     + [Nextcloud - PostgreSQL Setup and Deployment<br>](#nextcloud---postgresql-setup-and-deployment-br-)
     + [Statping Setup](#statping-setup)
+  * [Conclusion](#conclusion)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 <br><br><br><br><br><br></a><br><br><br><br><br><br>
 
 ## Introduction
