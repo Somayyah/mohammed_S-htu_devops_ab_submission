@@ -8,7 +8,9 @@
 <a href="url"><img src="https://i0.wp.com/www.hashtagarabi.com/wp-content/uploads/2017/10/20604537_1878331972486933_594423176737691610_n.png?fit=610%2C380&ssl=1" align="left" height="140"></a><br><br><br><br><br><br>
   
 # Kunsol Group- Website Deployment
+## Table Of Content
 - [Kunsol Group- Website Deployment](#kunsol-group--website-deployment)
+  * [Table Of Content](#table-of-content)
   * [Introduction](#introduction)
   * [Architecture Final Setup - Description](#architecture-final-setup---description)
     + [Tasks finished](#tasks-finished)
@@ -26,8 +28,6 @@
     + [Nextcloud - PostgreSQL Setup and Deployment<br>](#nextcloud---postgresql-setup-and-deployment-br-)
     + [Statping Setup](#statping-setup)
   * [Conclusion](#conclusion)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 <br><br><br><br><br><br></a><br><br><br><br><br><br>
 
