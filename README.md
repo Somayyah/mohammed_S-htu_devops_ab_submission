@@ -8,7 +8,7 @@
 <a href="url"><img src="https://i0.wp.com/www.hashtagarabi.com/wp-content/uploads/2017/10/20604537_1878331972486933_594423176737691610_n.png?fit=610%2C380&ssl=1" align="left" height="140"></a><br><br><br><br><br><br>
   
 # Kunsol Group- Website Deployment
-____________________________________________________________________________________________________________________________
+
 ## Introduction
 
 As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools, to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind  the many design choices that were made. Additionally, it is also displays the configurations and the diagram section.
