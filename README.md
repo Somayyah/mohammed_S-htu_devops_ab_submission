@@ -27,7 +27,6 @@
       - [Grafana and Prometheus Monitoring <br>](#grafana-and-prometheus-monitoring--br-)
     + [Nextcloud - PostgreSQL Setup and Deployment<br>](#nextcloud---postgresql-setup-and-deployment-br-)
     + [Statping Setup](#statping-setup)
-  * [Conclusion](#conclusion)
 
 <br><br>
 ## Introduction
