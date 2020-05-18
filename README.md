@@ -186,6 +186,9 @@ Nextcloud test account:
 __username:__ Linux and DevOps
 __password:__ Linux and DevOps
 
+Finally we get to access Nextcloud.
+![Nextcloudpage](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/nextclouddash.png)
+
 # Statping Setup
 Statping provides a status page to monitor websites and applications. It automatically fetchs the application's data render it. It can be paired with MySQL, Postgres, or SQLite on multiple operating systems. Setting up Statping is easy, here is how to do it:
 
@@ -210,3 +213,7 @@ __Step 1:__ On rancher, create a new workload with the following parameters:
 > * Path on the Node: /mydir/my-statping
 > * The Path on the Node must be: a directory or create
 > * Mount Point: /app
+__Step 2:__ After creating our workload, if configured correctly we can now go to it's IP, in our case it's http://40.76.85.251/. After scrolling down to the end of the page, we see the word ```dashboard```, clicking on it leads us to the log in page. We enter our predefined username and password lo log in.
+__Step 3:__ Setting up our services to view our websites.
+After logging into our dashboard, go to services and click on create.
+![create](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/create.png)
