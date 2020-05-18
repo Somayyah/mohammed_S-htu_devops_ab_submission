@@ -12,22 +12,17 @@
 - [Kunsol Group- Website Deployment](#kunsol-group--website-deployment)
   * [Introduction](#introduction)
   * [Tools and Services Used](#tools-and-services-used)
-  * [Gridsome Local Deployment Testing](#gridsome-local-deployment-testing)
-  * [Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git](#gridsome-ci-cd---automated-gridsome-deployment-with-docker-and-git)
-    + [Gridsome Build with Docker](#gridsome-build-with-docker)
-      - [Image Dockerfile](#image-dockerfile)
-  * [DockerHub - GitHub Automated Builds (CI)](#dockerhub---github-automated-builds--ci-)
-  * [Continuous Deployment Using Rancher](#continuous-deployment-using-rancher)
-    + [Setting Up Rancher](#setting-up-rancher)
-    + [Rancher Workload Configuration](#rancher-workload-configuration)
-    + [Grafana and Prometheus Monitoring <br>](#grafana-and-prometheus-monitoring--br-)
-  * [Nextcloud - PostgreSQL Setup and Deployment<br>](#nextcloud---postgresql-setup-and-deployment-br-)
-  * [Statping Setup](#statping-setup)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-
-
+  * [Tasks](#tasks)
+    + [Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git](#gridsome-ci-cd---automated-gridsome-deployment-with-docker-and-git)
+      - [Gridsome Local Deployment - Test](#gridsome-local-deployment---test)
+      - [Gridsome Build with Docker](#gridsome-build-with-docker)
+      - [DockerHub - GitHub Automated Builds (CI)](#dockerhub---github-automated-builds--ci-)
+    + [Continuous Deployment Using Rancher](#continuous-deployment-using-rancher)
+      - [Setting Up Rancher](#setting-up-rancher)
+      - [Rancher Workload Configuration](#rancher-workload-configuration)
+      - [Grafana and Prometheus Monitoring <br>](#grafana-and-prometheus-monitoring--br-)
+    + [Nextcloud - PostgreSQL Setup and Deployment<br>](#nextcloud---postgresql-setup-and-deployment-br-)
+    + [Statping Setup](#statping-setup)
 
 ## Introduction
 
@@ -44,21 +39,23 @@ ________________________________________________________________
 7. Buttercup: Passwords management.
 ________________________________________________________________
 
-## Gridsome Local Deployment Testing
+## Tasks
+
+### Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git
+
+#### Gridsome Local Deployment - Test
 
 ![console](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsome)
  
 To access the website visit http://localhost:8080/
 ________________________________________________________________
 
-## Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git
-
 Manually setting the infartructure, deploying the website, tracking code changes and testing them is tiresome and leads to many conflicts, the total opposite to what DevOps stands for. This can be avoided by automating the process using a container based approach. With containarization, we can setup our infrastructure as many times as we want in a negligeble time, while ensuring the same result everytime.
 
-### Gridsome Build with Docker
+#### Gridsome Build with Docker
  __Goal:__ To build an image named gridsome-docker that contains all the necessary dependancies to run our website. 
 
-#### Image Dockerfile 
+**Image Dockerfile** 
 
 ```
 FROM node:14.2.0-alpine3.10
@@ -107,7 +104,7 @@ sudo snap install serve
 If deployed correctly, our website can be visited via: http://VM-IP:8080/
 
 ________________________________________________________________
-## DockerHub - GitHub Automated Builds (CI)
+#### DockerHub - GitHub Automated Builds (CI)
 Image building can be automated after connecting DockerHub image repository to the appropriate github repository. Build instances can be viewed and monitord in the timeline section.
 
 ![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/autobuilds.png)
@@ -116,10 +113,10 @@ THe DockerHub repository is connected with GitHub, automatic build is configures
 Repo on docker hub: https://hub.docker.com/r/somayyah/konsul.
 
 ________________________________________________________________
-## Continuous Deployment Using Rancher
+### Continuous Deployment Using Rancher
 Using Rancher, we can automate the deployment process for our containers. Setting Rancher is as simple as running any other generic container.
 
-### Setting Up Rancher
+#### Setting Up Rancher
 Using **rancher:stable** Docker image we can deploy Rancher with the following command:
 
 ```
@@ -138,7 +135,7 @@ __Step 3:__ Fill the relevent data like the name and ID's.
 After creating the cluster, we can view it in the global view. It needs some time to become active.
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/global.png)
 
-### Rancher Workload Configuration
+#### Rancher Workload Configuration
 
 After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on Rancher to make it accessable.<br>
 
@@ -156,7 +153,7 @@ __Step 5:__ Click save and wait for the changes to be applied. To view our deplo
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)<br>
 Our website is now deployed and can be accecced via: http://20.185.39.108/<br>
 
-### Grafana and Prometheus Monitoring <br>
+#### Grafana and Prometheus Monitoring <br>
 
 __PREREQUISITE:__<br>
 * Make sure that you are allowing traffic on port 9796 for each of your nodes because Prometheus will scrape metrics from here.<br>
@@ -171,7 +168,7 @@ To access the Grafana dashboard can be done from global view -> cluster dashbour
 ![dashboard](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/dashboard.png)<br>
 ________________________________________________________________
 
-## Nextcloud - PostgreSQL Setup and Deployment<br>
+### Nextcloud - PostgreSQL Setup and Deployment<br>
 Deploying Nextcloud in congugation with PostgreSQL database is a rather simple task, to successfuly perform the setup I followed these steps:
 __Step 1:__ On our cluster, we create the nextcloud workload with these parameters:
 * Name: nextcloud-website
@@ -225,7 +222,7 @@ Finally we get to access Nextcloud.
 ![Nextcloudpage](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/nextclouddash.png)
 
 ________________________________________________________________
-## Statping Setup
+### Statping Setup
 Statping provides a status page to monitor websites and applications. It automatically fetchs the application's data render it. It can be paired with MySQL, Postgres, or SQLite on multiple operating systems. Setting up Statping is easy, here is how to do it:
 
 __Step 1:__ On rancher, create a new workload with the following parameters:
@@ -259,7 +256,7 @@ Fill the following parameters:
 * Service Endpoint (URL): website URL.
 * Verify SSL: Greyed out.
 Then click on ```create service```. We should see our new services in the service tab, sometimes a refresh is nessecery.
-To monitor the Kunsol and nextcloud websites I created the folloing services:
+To monitor the Kunsol and Nextcloud websites I created the following services:
 ![my services](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ourservices.png)
 ![my websites](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/webs.png)
 
