@@ -173,7 +173,7 @@ __Step 2:__ On our cluster, we create the database workload with these parameter
 database setup, done.
 
 __Step 3:__ After the deployment finishes, we setup the admin account as follows:
-1. Go to the new Nextcloud IP, in our case it's: http://52.170.38.5/
+1. Go to the new Nextcloud IP, in our case it's: http://40.76.222.167/
 2. When prompted to create an admin account, enter the admin username and password that we previously defined in the nextcloud workload.
 3. Wait untill the setup finishes.
 
@@ -181,6 +181,10 @@ After accessing the admin portal, you can add users, groups and try all of the o
 
 Admin account setup, done.
 
+Nextcloud test account:
+
+__username:__ Linux and DevOps
+__password:__ Linux and DevOps
+
 # Statping Setup
 
-Here.
