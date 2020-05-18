@@ -27,18 +27,13 @@
       - [Grafana and Prometheus Monitoring <br>](#grafana-and-prometheus-monitoring--br-)
     + [Nextcloud - PostgreSQL Setup and Deployment<br>](#nextcloud---postgresql-setup-and-deployment-br-)
     + [Statping Setup](#statping-setup)
-
-<br><br>
 ## Introduction
-
 As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind the many design choices that were made. Additionally, it also displays the configurations and the diagram section.
-
 ## Architecture Final Setup - Description
 After finishing all of the assigned tasks we will have the following milestones:
 1. The Konsul group official website, up and running.
 2. Collaboration platform Nextcloud Deployed and ready to use.
 3. Statping service configured to monitor Nextcloud and the Konsul website.
-
 ### Tasks finished 
 - [x] Konsul website.
 - [x] Nextcloud deployment.
@@ -49,7 +44,6 @@ Progress percentage: %100
 * Konsul website: http://20.185.39.108/
 * Nextcloud platform: http://40.76.222.167/
 * Statping service: http://40.76.85.251/
-
 ### Tools and Services Used
 1. Rancher:stable container - Orchestration.
 2. Azure pipelines.
@@ -57,8 +51,6 @@ Progress percentage: %100
 4. Gridsome: A Vue.js framework.
 5. Nextcloud.
 6. statping:v0.90.36 Docker image.
-7. Buttercup: Passwords management.
-
 ## Tasks
 ### Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git
 Manually setting the infartructure, deploying the website, tracking code changes and testing them is tiresome and leads to many conflicts, the total opposite to what DevOps stands for. This can be avoided by automating the process using a container based approach. With containarization, we can setup our infrastructure as many times as we want in a negligeble time, while ensuring the same result everytime.
@@ -68,7 +60,6 @@ Manually setting the infartructure, deploying the website, tracking code changes
 To access the website visit http://localhost:8080/<br>
 #### Gridsome Build with Docker
  __Goal:__ To build an image named gridsome-docker that contains all the necessary dependancies to run our website. 
-
 **Image Dockerfile** 
 ```
 FROM node:14.2.0-alpine3.10
@@ -138,11 +129,10 @@ __Step 2:__ We are going to deploy using Azure AKS so we will select it.
 __Step 3:__ Fill the relevant data like the name and IDs.
 After creating the cluster, we can view it in the global view. It needs some time to become active.
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/global.png)
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 #### Rancher Workload Configuration
 After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on Rancher to make it accessible.<br>
 __Step 1:__ From our cluster go to default.
-<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/def.png" align="left" height="300"></a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/def.png" align="left" height="300"></a><br><br><br><br><br><br><br><br><br><br><br><br>
 __Step 2:__ On the right side of the screen select ```Deploy```.<br>
 __Step 3:__ Set the name to what you like and the Docker image, in our case we will use ```somayyah/konsul```.<br>
 __Step 4:__ Click on add port and set the feilds as the following:<br>
@@ -154,7 +144,6 @@ __Step 4:__ Click on add port and set the feilds as the following:<br>
 __Step 5:__ Click save and wait for the changes to be applied. To view our deployed site, click on ```80/tcp``` located under the workload name.<br>
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)<br>
 Our website is now deployed and can be accecced via: http://20.185.39.108/<br>
-
 #### Grafana and Prometheus Monitoring <br>
 __PREREQUISITE:__<br>
 * Make sure that you are allowing traffic on port 9796 for each of your nodes because Prometheus will scrape metrics from here.<br>
@@ -163,10 +152,8 @@ To monitor our Kubernetes cluster we can configure Rancher to deploy Prometheus,
 > 2. Select **Tools** > **Monitoring** in the navigation bar.<br>
 > 3. Select **Enable** to show the Prometheus configuration options. Review the resource consumption recommendations to ensure you have enough resources for Prometheus and on your worker nodes to enable monitoring. Enter in your desired configuration options.<br>
 > 4. Click **Save**.<br>
-
 To access the Grafana dashboard can be done from global view -> cluster dashbourd -> click on Grafana icon.<br>
 ![dashboard](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/dashboard.png)<br>
-
 ### Nextcloud - PostgreSQL Setup and Deployment<br>
 Deploying Nextcloud in conjugation with PostgreSQL database is a rather simple task, to successfully perform the setup I followed these steps:
 __Step 1:__ On our cluster, we create the Nextcloud workload with these parameters:
