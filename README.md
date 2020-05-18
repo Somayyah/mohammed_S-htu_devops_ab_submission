@@ -16,7 +16,7 @@ As per the request of the Kunsol group, this report describes the process and th
 ## Gridsome Local Deployment Testing
 
 ![console](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsome)
-
+ 
 To access the website visit http://localhost:8080/
 
 ## Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git
@@ -187,4 +187,3 @@ __username:__ Linux and DevOps
 __password:__ Linux and DevOps
 
 # Statping Setup
-
