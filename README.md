@@ -8,25 +8,6 @@
 <a href="url"><img src="https://i0.wp.com/www.hashtagarabi.com/wp-content/uploads/2017/10/20604537_1878331972486933_594423176737691610_n.png?fit=610%2C380&ssl=1" align="left" height="140"></a><br><br><br><br><br><br>
   
 # Kunsol Group- Website Deployment
-## Table Of Content
-- [Kunsol Group- Website Deployment](#kunsol-group--website-deployment)
-  * [Table Of Content](#table-of-content)
-  * [Introduction](#introduction)
-  * [Architecture Final Setup - Description](#architecture-final-setup---description)
-    + [Tasks finished](#tasks-finished)
-    + [Quick access list](#quick-access-list)
-    + [Tools and Services Used](#tools-and-services-used)
-  * [Tasks](#tasks)
-    + [Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git](#gridsome-cicd---automated-gridsome-deployment-with-docker-and-git)
-      - [Gridsome Local Deployment - Test](#gridsome-local-deployment---test)
-      - [Gridsome Build with Docker](#gridsome-build-with-docker)
-      - [DockerHub - GitHub Automated Builds (CI)](#dockerhub---github-automated-builds--ci-)
-    + [Continuous Deployment Using Rancher](#continuous-deployment-using-rancher)
-      - [Setting Up Rancher](#setting-up-rancher)
-      - [Rancher Workload Configuration](#rancher-workload-configuration)
-      - [Grafana and Prometheus Monitoring <br>](#grafana-and-prometheus-monitoring--br-)
-    + [Nextcloud - PostgreSQL Setup and Deployment<br>](#nextcloud---postgresql-setup-and-deployment-br-)
-    + [Statping Setup](#statping-setup)
 ## Introduction
 As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind the many design choices that were made. Additionally, it also displays the configurations and the diagram section.
 ## Architecture Final Setup - Description
