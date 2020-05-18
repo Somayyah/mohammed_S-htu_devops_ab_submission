@@ -29,11 +29,10 @@ Progress percentage: %100
 * Statping service: http://40.76.85.251/
 ### Tools and Services Used
 1. Rancher:stable container - Orchestration.
-2. Azure pipelines.
-3. Git / GitHub - Code versioning and 
-4. Gridsome: A Vue.js framework.
-5. Nextcloud.
-6. statping:v0.90.36 Docker image.
+2. Git / GitHub - Code versioning and 
+3. Gridsome: A Vue.js framework.
+4. Nextcloud.
+5. statping:v0.90.36 Docker image.
 ## Tasks
 ### Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git
 Manually setting the infartructure, deploying the website, tracking code changes and testing them is tiresome and leads to many conflicts, the total opposite to what DevOps stands for. This can be avoided by automating the process using a container based approach. With containarization, we can setup our infrastructure as many times as we want in a negligeble time, while ensuring the same result everytime.
