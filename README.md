@@ -8,13 +8,12 @@
 <a href="url"><img src="https://i0.wp.com/www.hashtagarabi.com/wp-content/uploads/2017/10/20604537_1878331972486933_594423176737691610_n.png?fit=610%2C380&ssl=1" align="left" height="140"></a><br><br><br><br><br><br>
   
 # Kunsol Group- Website Deployment
-
 - [Kunsol Group- Website Deployment](#kunsol-group--website-deployment)
   * [Introduction](#introduction)
   * [Architecture Final Setup - Description](#architecture-final-setup---description)
     + [Tasks finished](#tasks-finished)
-  * [Quick access list](#quick-access-list)
-  * [Tools and Services Used](#tools-and-services-used)
+    + [Quick access list](#quick-access-list)
+    + [Tools and Services Used](#tools-and-services-used)
   * [Tasks](#tasks)
     + [Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git](#gridsome-ci-cd---automated-gridsome-deployment-with-docker-and-git)
       - [Gridsome Local Deployment - Test](#gridsome-local-deployment---test)
@@ -26,6 +25,8 @@
       - [Grafana and Prometheus Monitoring <br>](#grafana-and-prometheus-monitoring--br-)
     + [Nextcloud - PostgreSQL Setup and Deployment<br>](#nextcloud---postgresql-setup-and-deployment-br-)
     + [Statping Setup](#statping-setup)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Introduction
 
