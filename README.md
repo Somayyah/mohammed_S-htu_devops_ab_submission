@@ -71,7 +71,6 @@ To access the website visit http://localhost:8080/<br>
  __Goal:__ To build an image named gridsome-docker that contains all the necessary dependancies to run our website. 
 
 **Image Dockerfile** 
-
 ```
 FROM node:14.2.0-alpine3.10
 
@@ -82,7 +81,6 @@ ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 USER node
 RUN npm i --global gridsome
 RUN npm i --global serve
-
 COPY --chown=node:node htu-devops-konsul-web/ /home/node/build/
 RUN echo && ls /home/node/build/ && echo
 WORKDIR /home/node/build
@@ -91,14 +89,12 @@ RUN npm cache clean --force
 RUN npm clean-install
 EXPOSE 8080
 CMD ~/.npm-global/bin/gridsome build && echo && ls ~/.npm-global/bin/ && ls && ~/.npm-global/bin/serve -d dist/
-
 ```
 To build the image use the command:
 ```
 docker build --no-cache . -t kunsol-image
 ```
 Docker image build --> Successful.
-
 To run the container via: 
 ```
 docker run -v $(pwd):/home/node/app/ --name konsul kunsol-image
@@ -120,9 +116,7 @@ If deployed correctly, our website can be visited via http://VM-IP:8080/
 
 #### DockerHub - GitHub Automated Builds (CI)
 Image building can be automated after connecting DockerHub image repository to the appropriate github repository. Build instances can be viewed and monitord in the timeline section.
-
 ![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/autobuilds.png)
-
 The DockerHub repository is connected with GitHub, the automatic build is configured on both the master and development branch.
 Repo on docker hub: https://hub.docker.com/r/somayyah/konsul.
 
@@ -131,7 +125,6 @@ Using Rancher, we can automate the deployment process for our containers. Settin
 
 #### Setting Up Rancher
 Using **rancher:stable** Docker image we can deploy Rancher with the following command:
-
 ```
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
@@ -140,7 +133,6 @@ docker run -d --restart=unless-stopped \
 Rancher uses the ports 80 and 443, make sure they can be accessible. To access the Rancher CPanel, go to ```https://vm-IP```.
 After setting the admin password, clusters configuration can be initiated.
 To build a new cluster:
-
 __Step 1:__ From Rancher's main page click on ```add cluster``` button
 ![add cluster](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/cluster.png)
 __Step 2:__ We are going to deploy using Azure AKS so we will select it.
@@ -149,9 +141,7 @@ After creating the cluster, we can view it in the global view. It needs some tim
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/global.png)
 
 #### Rancher Workload Configuration
-
 After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on Rancher to make it accessible.<br>
-
 __Step 1:__ From our cluster go to default.<br>
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/def.png)<br>
 __Step 2:__ On the right side of the screen select ```Deploy```.<br>
@@ -167,12 +157,9 @@ __Step 5:__ Click save and wait for the changes to be applied. To view our deplo
 Our website is now deployed and can be accecced via: http://20.185.39.108/<br>
 
 #### Grafana and Prometheus Monitoring <br>
-
 __PREREQUISITE:__<br>
 * Make sure that you are allowing traffic on port 9796 for each of your nodes because Prometheus will scrape metrics from here.<br>
-
 To monitor our Kubernetes cluster we can configure Rancher to deploy Prometheus, by following the steps from the official documentation:<br>
-
 > 1. From the **Global** view, navigate to the cluster that you want to configure cluster monitoring.<br>
 > 2. Select **Tools** > **Monitoring** in the navigation bar.<br>
 > 3. Select **Enable** to show the Prometheus configuration options. Review the resource consumption recommendations to ensure you have enough resources for Prometheus and on your worker nodes to enable monitoring. Enter in your desired configuration options.<br>
@@ -186,11 +173,11 @@ __Step 1:__ On our cluster, we create the Nextcloud workload with these paramete
 * Name: Nextcloud-website
 * Docker Image: Nextcloud
 * Port Mapping: 
-> * Port Name    : any name.<br>
+> * Port Name: any name.<br>
 > * Publish the container port : 80<br>
-> * Protocol    : TCP<br>
-> * As a    : Layer-4 load balancer<br>
-> * On listening port : 80<br>
+> * Protocol: TCP<br>
+> * As a: Layer-4 load balancer<br>
+> * On listening port: 80<br>
 * Environment variables:
 > * POSTGRES_DB=postgressdb
 > * POSTGRES_USER=user-name
@@ -204,7 +191,6 @@ __Step 1:__ On our cluster, we create the Nextcloud workload with these paramete
 > * Path on the Node: /nextcloud
 > * The Path on the Node must be: a directory or create
 > * Mount Point: /var/www/html
-
 Netxcloud setup, done.
 __Step 2:__ On our cluster, we create the database workload with these parameters:
 * Name: postgressdb
@@ -213,30 +199,22 @@ __Step 2:__ On our cluster, we create the database workload with these parameter
 > * POSTGRES_DB=postgressdb
 > * POSTGRES_USER=user-name
 > * POSTGRES_PASSWORD=db-password
-
 database setup, done.
-
 __Step 3:__ After the deployment finishes, we set up the admin account as follows:
 1. Go to the new Nextcloud IP, in our case it's: http://40.76.222.167/
 2. When prompted to create an admin account, enter the admin username and password that we previously defined in the Nextcloud workload.
 3. Wait until the setup finishes.
-
 After accessing the admin portal, you can add users, groups and try all of the other available services.
-
 Admin account setup, done.
-
 Nextcloud test account:
-
 __username:__ Linux and DevOps
 __password:__ Linux and DevOps
-
 Finally, we get to access Nextcloud.
 ![Nextcloudpage](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/nextclouddash.png)
+
 ### Statping Setup
 Statping provides a status page to monitor websites and applications. It automatically fetches the application's data to render it. It can be paired with MySQL, Postgres, or SQLite on multiple operating systems. Setting up Statping is easy, here is how to do it:
-
 __Step 1:__ On rancher, create a new workload with the following parameters:
-
 * Name: m-statping
 * Docker Image: statping/statping:v0.90.36
 * Port Mapping: 
@@ -271,5 +249,4 @@ To monitor the Kunsol and Nextcloud websites I created the following services:
 ![my websites](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/webs.png)
 
 ## Conclusion
-
 Following a DevOps architecture approach instead of the waterfall approach can be of great help by reducing maintenance and deployment time in exchange for higher productivity and quality. By applying my skills and knowledge to follow this approach, I was able to implement all the required tasks, replicating the results can easily be done without hassle or conflicts.
