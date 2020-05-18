@@ -9,6 +9,26 @@
   
 # Kunsol Group- Website Deployment
 
+- [Kunsol Group- Website Deployment](#kunsol-group--website-deployment)
+  * [Introduction](#introduction)
+  * [Tools and Services Used](#tools-and-services-used)
+  * [Gridsome Local Deployment Testing](#gridsome-local-deployment-testing)
+  * [Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git](#gridsome-ci-cd---automated-gridsome-deployment-with-docker-and-git)
+    + [Gridsome Build with Docker](#gridsome-build-with-docker)
+      - [Image Dockerfile](#image-dockerfile)
+  * [DockerHub - GitHub Automated Builds (CI)](#dockerhub---github-automated-builds--ci-)
+  * [Continuous Deployment Using Rancher](#continuous-deployment-using-rancher)
+    + [Setting Up Rancher](#setting-up-rancher)
+    + [Rancher Workload Configuration](#rancher-workload-configuration)
+    + [Grafana and Prometheus Monitoring <br>](#grafana-and-prometheus-monitoring--br-)
+  * [Nextcloud - PostgreSQL Setup and Deployment<br>](#nextcloud---postgresql-setup-and-deployment-br-)
+  * [Statping Setup](#statping-setup)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+
+
 ## Introduction
 
 As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools, to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind  the many design choices that were made. Additionally, it is also displays the configurations and the diagram section.
