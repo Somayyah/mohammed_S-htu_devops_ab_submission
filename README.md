@@ -28,7 +28,7 @@
 
 ## Introduction
 
-As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools, to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind  the many design choices that were made. Additionally, it is also displays the configurations and the diagram section.
+As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind the many design choices that were made. Additionally, it also displays the configurations and the diagram section.
 
 ## Architecture Final Setup - Description
 After finishing all of the assigned tasks we will have the following milestones:
@@ -51,7 +51,7 @@ ________________________________________________________________
 ### Tools and Services Used
 1. Rancher:stable container - Orchestration.
 2. Azure pipelines.
-3. Git / github - Code versioning and 
+3. Git / GitHub - Code versioning and 
 4. Gridsome: A Vue.js framework.
 5. Nextcloud.
 6. statping:v0.90.36 Docker image.
@@ -96,18 +96,18 @@ To build the image use the command:
 ```
 docker build --no-cache . -t kunsol-image
 ```
-Docker image build --> Successfull.
+Docker image build --> Successful.
 
 To run the container via: 
 ```
 docker run -v $(pwd):/home/node/app/ --name konsul kunsol-image
 ```
 to build our website we use ```serve -d```:
-_step 1 :_ Copy the content of dist/ folder from the container to host's working directory
+_step 1:_ Copy the content of dist/ folder from the container to the host's working directory
 ```
 docker cp konsul:/home/node/build/dist ./dist
 ```
-_step 2 :_ launch the website with the command serve
+_step 2:_ launch the website with the command serve
 ```
 serve -d dist/
 ```
@@ -115,7 +115,7 @@ To install ```serve``` type the following command:
 ```
 sudo snap install serve
 ````
-If deployed correctly, our website can be visited via: http://VM-IP:8080/
+If deployed correctly, our website can be visited via http://VM-IP:8080/
 
 ________________________________________________________________
 #### DockerHub - GitHub Automated Builds (CI)
@@ -123,7 +123,7 @@ Image building can be automated after connecting DockerHub image repository to t
 
 ![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/autobuilds.png)
 
-THe DockerHub repository is connected with GitHub, automatic build is configures on both the master and development branch.
+The DockerHub repository is connected with GitHub, the automatic build is configured on both the master and development branch.
 Repo on docker hub: https://hub.docker.com/r/somayyah/konsul.
 
 ________________________________________________________________
@@ -138,30 +138,30 @@ docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
   rancher/rancher:latest
 ```
-Rancher uses the ports 80 and 443, make sure they can be accessable. To access the Rancher CPanel, go to ```https://vm-ip```.
+Rancher uses the ports 80 and 443, make sure they can be accessible. To access the Rancher CPanel, go to ```https://vm-IP```.
 After setting the admin password, clusters configuration can be initiated.
 To build a new cluster:
 
 __Step 1:__ From Rancher's main page click on ```add cluster``` button
 ![add cluster](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/cluster.png)
 __Step 2:__ We are going to deploy using Azure AKS so we will select it.
-__Step 3:__ Fill the relevent data like the name and ID's.
+__Step 3:__ Fill the relevant data like the name and IDs.
 After creating the cluster, we can view it in the global view. It needs some time to become active.
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/global.png)
 
 #### Rancher Workload Configuration
 
-After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on Rancher to make it accessable.<br>
+After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on Rancher to make it accessible.<br>
 
 __Step 1:__ From our cluster go to default.<br>
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/def.png)<br>
 __Step 2:__ On the right side of the screen select ```Deploy```.<br>
 __Step 3:__ Set the name to what you like and the Docker image, in our case we will use ```somayyah/konsul```.<br>
 __Step 4:__ Click on add port and set the feilds as the following:<br>
-* Port Name	: any name.<br>
+* Port Name    : any name.<br>
 * Publish the container port : 5000<br>
-* Protocol	: TCP<br>
-* As a	: Layer-4 load balancer<br>
+* Protocol    : TCP<br>
+* As a    : Layer-4 load balancer<br>
 * On listening port : 80<br>
 __Step 5:__ Click save and wait for the changes to be applied. To view our deployed site, click on ```80/tcp``` located under the workload name.<br>
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ip.png)<br>
@@ -183,15 +183,15 @@ To access the Grafana dashboard can be done from global view -> cluster dashbour
 ________________________________________________________________
 
 ### Nextcloud - PostgreSQL Setup and Deployment<br>
-Deploying Nextcloud in congugation with PostgreSQL database is a rather simple task, to successfuly perform the setup I followed these steps:
-__Step 1:__ On our cluster, we create the nextcloud workload with these parameters:
-* Name: nextcloud-website
-* Docker Image: nextcloud
+Deploying Nextcloud in conjugation with PostgreSQL database is a rather simple task, to successfully perform the setup I followed these steps:
+__Step 1:__ On our cluster, we create the Nextcloud workload with these parameters:
+* Name: Nextcloud-website
+* Docker Image: Nextcloud
 * Port Mapping: 
-> * Port Name	: any name.<br>
+> * Port Name    : any name.<br>
 > * Publish the container port : 80<br>
-> * Protocol	: TCP<br>
-> * As a	: Layer-4 load balancer<br>
+> * Protocol    : TCP<br>
+> * As a    : Layer-4 load balancer<br>
 > * On listening port : 80<br>
 * Environment variables:
 > * POSTGRES_DB=postgressdb
@@ -218,10 +218,10 @@ __Step 2:__ On our cluster, we create the database workload with these parameter
 
 database setup, done.
 
-__Step 3:__ After the deployment finishes, we setup the admin account as follows:
+__Step 3:__ After the deployment finishes, we set up the admin account as follows:
 1. Go to the new Nextcloud IP, in our case it's: http://40.76.222.167/
-2. When prompted to create an admin account, enter the admin username and password that we previously defined in the nextcloud workload.
-3. Wait untill the setup finishes.
+2. When prompted to create an admin account, enter the admin username and password that we previously defined in the Nextcloud workload.
+3. Wait until the setup finishes.
 
 After accessing the admin portal, you can add users, groups and try all of the other available services.
 
@@ -232,22 +232,22 @@ Nextcloud test account:
 __username:__ Linux and DevOps
 __password:__ Linux and DevOps
 
-Finally we get to access Nextcloud.
+Finally, we get to access Nextcloud.
 ![Nextcloudpage](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/nextclouddash.png)
 
 ________________________________________________________________
 ### Statping Setup
-Statping provides a status page to monitor websites and applications. It automatically fetchs the application's data render it. It can be paired with MySQL, Postgres, or SQLite on multiple operating systems. Setting up Statping is easy, here is how to do it:
+Statping provides a status page to monitor websites and applications. It automatically fetches the application's data to render it. It can be paired with MySQL, Postgres, or SQLite on multiple operating systems. Setting up Statping is easy, here is how to do it:
 
 __Step 1:__ On rancher, create a new workload with the following parameters:
 
 * Name: m-statping
 * Docker Image: statping/statping:v0.90.36
 * Port Mapping: 
-> * Port Name	: any name.<br>
+> * Port Name    : any name.<br>
 > * Publish the container port : 8080<br>
-> * Protocol	: TCP<br>
-> * As a	: Layer-4 load balancer<br>
+> * Protocol    : TCP<br>
+> * As a    : Layer-4 load balancer<br>
 > * On listening port : 80<br>
 * Environment variables:
 > * DB_CONN=sqlite
@@ -269,11 +269,11 @@ Fill the following parameters:
 * Service Type: HTTP for websites/TCP for servers.
 * Service Endpoint (URL): website URL.
 * Verify SSL: Greyed out.
-Then click on ```create service```. We should see our new services in the service tab, sometimes a refresh is nessecery.
+Then click on ```create service```. We should see our new services in the service tab, sometimes a refresh is necessary.
 To monitor the Kunsol and Nextcloud websites I created the following services:
 ![my services](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ourservices.png)
 ![my websites](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/webs.png)
 
 ## Conclusion
 
-Following a DevOps architecture approach instead of the waterfall one can be of great help by reducing maintenance and deployment time in exchange for higher productivity and quality. By applying my skills and knowledge to follow this approach, I was able to implement all the required tasks, replicating the results can easily be done without hastle or conflicts.
+Following a DevOps architecture approach instead of the waterfall approach can be of great help by reducing maintenance and deployment time in exchange for higher productivity and quality. By applying my skills and knowledge to follow this approach, I was able to implement all the required tasks, replicating the results can easily be done without hassle or conflicts.
