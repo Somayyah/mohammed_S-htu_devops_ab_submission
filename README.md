@@ -42,14 +42,14 @@ After finishing all of the assigned tasks we will have the following milestones:
 - [x] Nextcloud deployment.
 - [x] Statping service deployment.
 Progress percentage: %100
-## Quick access list
+### Quick access list
 * Rancher CPanel: https://40.87.87.148/
 * Konsul website: http://20.185.39.108/
 * Nextcloud platform: http://40.76.222.167/
 * Statping service: http://40.76.85.251/
 ________________________________________________________________
 
-## Tools and Services Used
+### Tools and Services Used
 1. Rancher:stable container - Orchestration.
 2. Azure pipelines.
 3. Git / github - Code versioning and 
