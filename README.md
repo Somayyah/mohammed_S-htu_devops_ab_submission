@@ -244,7 +244,7 @@ Fill the following parameters:
 * Service Endpoint (URL): website URL.
 * Verify SSL: Greyed out.
 Then click on ```create service```. We should see our new services in the service tab, sometimes a refresh is necessary.
-To monitor the Kunsol and Nextcloud websites I created the following services:<br>
+To monitor the Kunsol and Nextcloud websites I created the following services:
 ![create](https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/ourservices.png)
 ![create](https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/webs.png)<br>
 **Conclusion:**<br>
