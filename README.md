@@ -249,5 +249,6 @@ To monitor the Kunsol and Nextcloud websites I created the following services:
 ![my services](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/ourservices.png)
 ![my websites](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/webs.png)
 
-<br><br><br><br><br><br>## Conclusion
+<br><br>
+## Conclusion
 Following a DevOps architecture approach instead of the waterfall approach can be of great help by reducing maintenance and deployment time in exchange for higher productivity and quality. By applying my skills and knowledge to follow this approach, I was able to implement all the required tasks, replicating the results can easily be done without hassle or conflicts.
