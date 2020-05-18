@@ -29,7 +29,6 @@
     + [Statping Setup](#statping-setup)
   * [Conclusion](#conclusion)
 
-<br><br><br><br><br><br>
 
 ## Introduction
 
