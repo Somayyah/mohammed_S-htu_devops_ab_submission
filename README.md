@@ -17,7 +17,7 @@
     + [Quick access list](#quick-access-list)
     + [Tools and Services Used](#tools-and-services-used)
   * [Tasks](#tasks)
-    + [Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git](#gridsome-ci-cd---automated-gridsome-deployment-with-docker-and-git)
+    + [Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git](#gridsome-cicd---automated-gridsome-deployment-with-docker-and-git)
       - [Gridsome Local Deployment - Test](#gridsome-local-deployment---test)
       - [Gridsome Build with Docker](#gridsome-build-with-docker)
       - [DockerHub - GitHub Automated Builds (CI)](#dockerhub---github-automated-builds--ci-)
