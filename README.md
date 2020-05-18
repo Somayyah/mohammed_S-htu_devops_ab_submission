@@ -44,9 +44,8 @@ ________________________________________________________________
 ### Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git
 
 #### Gridsome Local Deployment - Test
-<br><br>
-<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/gridsome.png" align="right" height="100"></a>
-  </div><br> 
+<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/gridsome.png" align="left" height="300"></a>
+  </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 To access the website visit http://localhost:8080/
 ________________________________________________________________
 
