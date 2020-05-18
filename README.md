@@ -217,3 +217,9 @@ __Step 2:__ After creating our workload, if configured correctly we can now go t
 __Step 3:__ Setting up our services to view our websites.
 After logging into our dashboard, go to services and click on create.
 ![create](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/create.png)
+Fill the following parameters:
+* Service name: name.
+* Service Type: HTTP for websites/TCP for servers.
+* Service Endpoint (URL): website URL.
+* Verify SSL: Greyed out.
+Then click on ```create service```
