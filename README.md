@@ -140,7 +140,7 @@ __Step 3:__ Fill the relevant data like the name and IDs.
 After creating the cluster, we can view it in the global view. It needs some time to become active.
 ![global](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/global.png)
 
-#### Rancher Workload Configuration
+#### Rancher Workload Configuration<br>
 After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on Rancher to make it accessible.<br>
 __Step 1:__ From our cluster go to default.
 <a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/def.png" align="left" height="300"></a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
