@@ -50,7 +50,6 @@ Progress percentage: %100
 * Konsul website: http://20.185.39.108/
 * Nextcloud platform: http://40.76.222.167/
 * Statping service: http://40.76.85.251/
-________________________________________________________________
 
 ### Tools and Services Used
 1. Rancher:stable container - Orchestration.
@@ -60,7 +59,6 @@ ________________________________________________________________
 5. Nextcloud.
 6. statping:v0.90.36 Docker image.
 7. Buttercup: Passwords management.
-________________________________________________________________
 
 ## Tasks
 ### Gridsome CI/CD - Automated Gridsome Deployment with Docker and Git
@@ -69,7 +67,6 @@ Manually setting the infartructure, deploying the website, tracking code changes
 <a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/gridsome.png" align="left" height="300"></a>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 To access the website visit http://localhost:8080/<br>
-________________________________________________________________
 #### Gridsome Build with Docker
  __Goal:__ To build an image named gridsome-docker that contains all the necessary dependancies to run our website. 
 
@@ -121,7 +118,6 @@ sudo snap install serve
 ````
 If deployed correctly, our website can be visited via http://VM-IP:8080/
 
-________________________________________________________________
 #### DockerHub - GitHub Automated Builds (CI)
 Image building can be automated after connecting DockerHub image repository to the appropriate github repository. Build instances can be viewed and monitord in the timeline section.
 
@@ -130,7 +126,6 @@ Image building can be automated after connecting DockerHub image repository to t
 The DockerHub repository is connected with GitHub, the automatic build is configured on both the master and development branch.
 Repo on docker hub: https://hub.docker.com/r/somayyah/konsul.
 
-________________________________________________________________
 ### Continuous Deployment Using Rancher
 Using Rancher, we can automate the deployment process for our containers. Setting Rancher is as simple as running any other generic container.
 
@@ -184,7 +179,6 @@ To monitor our Kubernetes cluster we can configure Rancher to deploy Prometheus,
 > 4. Click **Save**.<br>
 To access the Grafana dashboard can be done from global view -> cluster dashbourd -> click on Grafana icon.<br>
 ![dashboard](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/dashboard.png)<br>
-________________________________________________________________
 
 ### Nextcloud - PostgreSQL Setup and Deployment<br>
 Deploying Nextcloud in conjugation with PostgreSQL database is a rather simple task, to successfully perform the setup I followed these steps:
@@ -238,8 +232,6 @@ __password:__ Linux and DevOps
 
 Finally, we get to access Nextcloud.
 ![Nextcloudpage](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/nextclouddash.png)
-
-________________________________________________________________
 ### Statping Setup
 Statping provides a status page to monitor websites and applications. It automatically fetches the application's data to render it. It can be paired with MySQL, Postgres, or SQLite on multiple operating systems. Setting up Statping is easy, here is how to do it:
 
