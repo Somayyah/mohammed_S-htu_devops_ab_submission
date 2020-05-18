@@ -146,7 +146,7 @@ __Step 1:__ From our cluster go to default.
 <a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/def.png" align="left" height="300"></a>
 __Step 2:__ On the right side of the screen select ```Deploy```.<br>
 __Step 3:__ Set the name to what you like and the Docker image, in our case we will use ```somayyah/konsul```.<br>
-<br><br><br><br>__Step 4:__ Click on add port and set the feilds as the following:<br>
+__Step 4:__ Click on add port and set the feilds as the following:<br><br><br><br><br><br><br><br><br>
 * Port Name: any name.<br>
 * Publish the container port : 5000<br>
 * Protocol: TCP<br>
