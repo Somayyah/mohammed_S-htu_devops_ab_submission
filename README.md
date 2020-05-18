@@ -143,7 +143,7 @@ After creating the cluster, we can view it in the global view. It needs some tim
 #### Rancher Workload Configuration
 After experimenting with our website Docker image, It became obvious that the container exploits the port 5000 to run the website, so it needs to be mapped with the port 80 on Rancher to make it accessible.<br>
 __Step 1:__ From our cluster go to default.
-<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/def.png" align="left" height="300"></a><br><br><br><br><br><br><br><br>
+<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/def.png" align="left" height="300"></a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 __Step 2:__ On the right side of the screen select ```Deploy```.<br>
 __Step 3:__ Set the name to what you like and the Docker image, in our case we will use ```somayyah/konsul```.<br>
 __Step 4:__ Click on add port and set the feilds as the following:<br>
