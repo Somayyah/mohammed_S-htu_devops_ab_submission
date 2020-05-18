@@ -35,7 +35,7 @@ After finishing all of the assigned tasks we will have the following milestones:
 2. Collaboration platform Nextcloud Deployed and ready to use.
 3. Statping service configured to monitor Nextcloud and the Konsul website.
 This diagram provides an overview of the architecture:
-![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/devops2.png)
+![DockerHub build timeline](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/devops.png)
 ### Tasks finished 
 - [x] Konsul website.
 - [x] Nextcloud deployment.
