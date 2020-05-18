@@ -5,7 +5,7 @@
     <a href="url"><img src="https://d3pmluylahx1gi.cloudfront.net/wp-content/uploads/2019/08/04212458/Nub8-What-is-Devops.png" align="right" height="100"></a>
   </div>
  
-<a href="url"><img src="https://i0.wp.com/www.hashtagarabi.com/wp-content/uploads/2017/10/20604537_1878331972486933_594423176737691610_n.png?fit=610%2C380&ssl=1" align="vertical-align:middle" height="100"></a>
+<a href="url"><img src="https://i0.wp.com/www.hashtagarabi.com/wp-content/uploads/2017/10/20604537_1878331972486933_594423176737691610_n.png?fit=610%2C380&ssl=1" align="vertical-align:middle" height="120"></a>
 ____________________________________________________________________________________________________________________________
 # Container Based Website Deployment - Kunsol Group
 
