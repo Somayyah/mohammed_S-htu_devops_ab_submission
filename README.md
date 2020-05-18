@@ -45,7 +45,7 @@ ________________________________________________________________
 
 #### Gridsome Local Deployment - Test
 <br><br>
-<a href="url"><img src="https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsom" align="right" height="100"></a>
+<a href="url"><img src="https://raw.githubusercontent.com/Somayyah/mohammed_S-htu_devops_ab_submission/master/gridsome.png" align="right" height="100"></a>
   </div><br> 
 To access the website visit http://localhost:8080/
 ________________________________________________________________
