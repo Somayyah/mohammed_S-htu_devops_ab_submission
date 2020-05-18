@@ -15,7 +15,7 @@ As per the request of the Kunsol group, this report describes the process and th
 
 ## Gridsome Local Deployment Testing
 
-![console](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsome | width=100)
+![console](https://github.com/Somayyah/mohammed_S-htu_devops_ab_submission/blob/master/gridsome)
  
 To access the website visit http://localhost:8080/
 
