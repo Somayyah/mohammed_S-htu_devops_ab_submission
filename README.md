@@ -29,7 +29,7 @@
     + [Statping Setup](#statping-setup)
   * [Conclusion](#conclusion)
 
-
+<br><br>
 ## Introduction
 
 As per the request of the Kunsol group, this report describes the process and the finished tasks for the Konsul website. This document provides a comprehensive list of all the tools ranging from the collaboration platform and monitoring tools to orchestration and containerization tools. The following procedure section explains our reasoning and thought process behind the many design choices that were made. Additionally, it also displays the configurations and the diagram section.
