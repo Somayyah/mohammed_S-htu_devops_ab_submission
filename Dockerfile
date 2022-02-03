@@ -15,4 +15,4 @@ USER node
 RUN npm cache clean --force
 RUN npm clean-install
 EXPOSE 8080
-CMD ~/.npm-global/bin/gridsome build && echo && ls ~/.npm-global/bin/ && ls && ~/.npm-global/bin/serve -d dist/
+CMD ~/.npm-global/bin/gridsome build && ~/.npm-global/bin/serve -d dist/
